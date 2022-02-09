@@ -6,6 +6,8 @@ from domain.model.ActionType import ActionType
 def send_message(step: ActionStep, type: ActionType):
     socket = SocketFactory.get_socket(type)
     try:
-        socket.sendall(bytes(step.name, 'utf-8'))
+        message = bytes(step.name, 'utf-8')
+        print(message)
+        socket.sendall(message)
     except Exception:
         print("Something went wrong")
