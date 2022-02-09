@@ -1,4 +1,3 @@
-from dependency_injector.wiring import inject, Provide
 from data.repository.ActionsRepository import ActionsRepository
 from domain.model.Action import Action
 

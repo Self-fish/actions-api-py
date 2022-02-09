@@ -10,7 +10,7 @@ from domain.usecase.PublishActionUseCase import PublishActionUseCase
 
 
 class ActionsController(Resource):
-    
+
     @inject
     def __init__(self, use_case: PublishActionUseCase = Provide[ActionsApiContainer.use_case]):
         self.__use_case: PublishActionUseCase = use_case

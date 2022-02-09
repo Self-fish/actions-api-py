@@ -13,6 +13,8 @@ class SocketFactory:
 
     def get_socket(self, type: ActionType):
         if type == ActionType.CLEAN_AQUARIUM:
+            print("Return clean socket")
             return self.__clean_socket
         elif type == ActionType.LIGHT_CONTROL:
+            print("Return lights socket")
             return self.__light_socket
