@@ -1,7 +1,12 @@
-from data.repository import ActionsRepository
+from data.repository.ActionsRepository import ActionsRepository
 from domain.model.Action import Action
 
 
-def publish(action: Action):
-    ActionsRepository.process_action(action)
+class PublishActionUseCase:
+
+    def __init__(self, repository: ActionsRepository):
+        self.__repository: ActionsRepository = repository
+
+    def publish(self, action: Action):
+        self.__repository.process_action(action)
 
