@@ -9,5 +9,3 @@ def send_message(step: ActionStep, type: ActionType):
         socket.sendall(bytes(step.name, 'utf-8'))
     except Exception:
         print("Something went wrong")
-    finally:
-        socket.close()
