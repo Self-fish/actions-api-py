@@ -11,3 +11,5 @@ def send_message(step: ActionStep, type: ActionType):
         socket.sendall(message)
     except Exception:
         print("Something went wrong")
+    finally:
+        socket.close()
