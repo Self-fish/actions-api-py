@@ -20,4 +20,5 @@ class ActionsController(Resource):
         body = request.json
         action = Action(ActionType[body['action']], ActionStep[body['step']])
         self.__use_case.publish(action)
-        return json.dumps(action.__dict__)
+        return request.json
+
