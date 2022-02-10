@@ -12,9 +12,7 @@ class SocketClient:
         socket = self.__socket_factory.get_socket(type)
         try:
             message = bytes(step.name, 'utf-8')
-            print(message)
             socket.sendall(message)
         except Exception:
-            print("Something went wrong")
             socket.close()
 
