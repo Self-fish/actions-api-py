@@ -8,3 +8,5 @@ class ActionStep(Enum):
     LIGHTS_OFF = 4
     FILLING_BOMB_ON = 5
     FILLING_BOMB_OFF = 6
+    EMPTY_BOMB_ON = 7
+    EMPTY_BOMB_OFF = 8
