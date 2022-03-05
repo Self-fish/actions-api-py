@@ -58,7 +58,7 @@ By sending a CONTROL_LIGHTS ActionType, we allow the following ActionSteps:
 
 ## Action 
 
-When we receive the remote action, we send via socket the message to the light-control and clean-control in order to handle it accordly
+When we receive the remote action, we send via socket the message to the [light-control](https://github.com/Self-fish/light-control) and [clean-control](https://github.com/Self-fish/clean-control) in order to handle it accordly
 
 ```python
 def send_message(self, step: ActionStep, type: ActionType):
