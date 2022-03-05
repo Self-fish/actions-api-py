@@ -10,7 +10,7 @@ from framework.controller.ActionsController import ActionsController
 app = Flask(__name__)
 api = Api(app)
 
-api.add_resource(ActionsController, '/actions')  # add endpoints
+api.add_resource(ActionsController, '/actions')
 
 if __name__ == '__main__':
     actions_container = ActionsApiContainer()

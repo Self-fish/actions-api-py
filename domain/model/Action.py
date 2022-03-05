@@ -7,4 +7,3 @@ class Action:
     def __init__(self, type: ActionType, step: ActionStep):
         self.type = type
         self.step = step
-

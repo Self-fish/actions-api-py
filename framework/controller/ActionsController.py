@@ -1,5 +1,4 @@
 from flask import request
-import json
 from flask_restful import Resource
 from dependency_injector.wiring import inject, Provide
 
@@ -10,6 +9,10 @@ from domain.model.ActionType import ActionType
 from domain.usecase.PublishActionUseCase import PublishActionUseCase
 
 
+ACTION = "action"
+STEP = "step"
+
+
 class ActionsController(Resource):
 
     @inject
@@ -18,7 +21,7 @@ class ActionsController(Resource):
 
     def post(self):
         body = request.json
-        action = Action(ActionType[body['action']], ActionStep[body['step']])
+        action = Action(ActionType[body[ACTION]], ActionStep[body[STEP]])
         self.__use_case.publish(action)
         return request.json
 

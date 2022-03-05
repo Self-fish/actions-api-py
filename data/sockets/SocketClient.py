@@ -15,4 +15,3 @@ class SocketClient:
             socket.sendall(message)
         except Exception:
             socket.close()
-
